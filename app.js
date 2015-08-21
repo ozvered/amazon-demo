@@ -11,6 +11,10 @@ app.get('/hello', function (req, res) {
     res.sendFile( __dirname +  '/public/file2.html');
 });
 
+app.post('/load', function (req, res) {
+    res.send( {data : 'this is the data'});
+});
+
 
 var server = app.listen(80, function () {
     var host = server.address().address;

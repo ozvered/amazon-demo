@@ -1,0 +1,22 @@
+{
+  "name": "amazon-demo",
+  "version": "1.0.0",
+  "description": "Amazon AWS Demo",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rotemx/amazon-demo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rotemx/amazon-demo/issues"
+  },
+  "homepage": "https://github.com/rotemx/amazon-demo#readme",
+  "dependencies": {
+    "express": "^4.13.3"
+  }
+}

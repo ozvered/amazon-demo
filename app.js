@@ -6,8 +6,7 @@ var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
 
-app.use(bodyParser.urlencoded({ extended: false }));
-
+var urlencodedParser = bodyParser.urlencoded({ extended: false });
 
 
 app.use(express.static('public'));
@@ -16,7 +15,7 @@ app.get('/hello', function (req, res) {
     res.sendFile( __dirname +  '/public/file2.html');
 });
 
-app.post('/load', function (req, res) {
+app.post('/load',urlencodedParser, function (req, res) {
     res.send( {data : 'the data you sent is:',
     params : req.body
     });

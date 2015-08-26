@@ -4,9 +4,9 @@
 
 var express = require('express');
 var app = express();
-var bodyParser = require('body-parser');
+/*var bodyParser = require('body-parser');
 
-var urlencodedParser = bodyParser.urlencoded({ extended: false });
+var urlencodedParser = bodyParser.urlencoded({ extended: false });*/
 
 
 app.use(express.static('public'));
@@ -15,14 +15,16 @@ app.get('/hello', function (req, res) {
     res.sendFile( __dirname +  '/public/file2.html');
 });
 
+/*
 app.post('/load',urlencodedParser, function (req, res) {
     res.send( {data : 'the data you sent is:',
     params : req.body
     });
 });
+*/
 
 
-var server = app.listen(80, function () {
+var server = app.listen(3000, function () {
     var host = server.address().address;
     var port = server.address().port;
 
